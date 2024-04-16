@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-    display: flex;
+    display: flex;/*Contenedor para que se vuelva mas flexible*/
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -54,7 +54,7 @@ body {
     /*animation: slideShow 8s infinite;*/
     animation-fill-mode: forwards; /* Mantener el último estado de la animación */
 }
-
+/*------------------------------------------*/
 .contenedor-deslizante {
     display: flex;/*Responsivo*/
     overflow: hidden;
@@ -62,12 +62,13 @@ body {
     height: 500px; /* Ajusta la altura de tus imágenes */
 }
 
+
+
 .contenedor-de-diapositivas {
     width: 200%; /* Para mantener dos imágenes una al lado de la otra */
     display: flex;
     animation: slideShow 15s infinite;/*Tiempo de animacion*/
 }
-/*------------------------------------------*/
 
 .slide {
     width: 50%;
@@ -157,12 +158,12 @@ gap: 10px;
 }
 
 .nav li a {
-font-size: 1.5rem; /* Tamaño de fuente más grande para una mejor legibilidad */
+font-size: 1rem; /* Tamaño de fuente más grande para una mejor legibilidad */
 }
 
 .contenido-izquierdo,
 .contenido-derecha{
-font-size: 1rem; /* Tamaño de fuente ajustado para dispositivos móviles */
+font-size: 0.5rem; /* Tamaño de fuente ajustado para dispositivos móviles */
 padding: 0 10px;
 }
 
@@ -185,7 +186,7 @@ font-size: 1.25rem;
 .title,
 .contenido-izquierdo,
 .contenido-derecha{
-font-size: 1.75rem; 
+font-size: 1.25rem; 
 }
 }
 .contenedor-de-imágenes {
