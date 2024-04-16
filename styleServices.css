@@ -1,0 +1,122 @@
+* Estilos globales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c2831;
+    color: white;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Logotipo */
+.logo {
+    font-size: 1.25rem; /* Tamaño de fuente responsivo */
+    line-height: 1.6;
+}
+
+/* Navegación */
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem; /* Tamaño de fuente responsivo */
+    transition: color 0.3s ease;
+    
+}
+/*Cuando el cursor este sobre el texto, cambia de color de blanco a verde*/
+.nav li a:hover,
+.nav li a:focus {
+    color: #b8fa9e;
+}
+@media (max-width: 768px) {
+    .header,
+    .nav,
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav li a {
+        font-size: 1.5rem; /* Tamaño de fuente más grande para una mejor legibilidad */
+    }
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/*CONTENEDOR PARA EL TITULO DE LA GALERIA*/
+.title-topic {
+    font-size: 2vw; /* Tamaño de fuente responsivo basado en el ancho de la vista del dispositivo */
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 2vw; /* Margen superior responsivo */
+    color: #d4fcf2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Media query para ajustar el tamaño del texto en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .title-topic {
+        font-size: 6vw; /* Tamaño de fuente más grande para pantallas más pequeñas */
+    }
+}
+.container {
+    display: flex;
+    max-width: 1200px; /* Ajustar según el ancho máximo deseado */
+    width: 100%;
+    height: auto; /* Se ajusta al contenido */
+  }
+  .column1 {
+    flex: 0 0 25%; /* Ajustar la proporción del ancho de la columna 1 */
+    font-size: 0.9em; /* Tamaño de fuente para el encabezado */
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear elementos al inicio */
+    color: #d4fcf2;
+    font-family:'Times New Roman', Times, serif
+  }
+  .column2 {
+    flex: 0 0 75%; /* Ajustar la proporción del ancho de la columna 2 */
+    font-size: 2em; /* Tamaño de fuente para el texto */
+    padding: 50px;
+    box-sizing: border-box;
+    color: #d4fcf2;
+    font-family:'Times New Roman', Times, serif
+  }
+  /* Estilo para que sea responsivo */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .column1, .column2 {
+      flex: 0 0 100%;
+      padding: 20px;
+    }
+  }

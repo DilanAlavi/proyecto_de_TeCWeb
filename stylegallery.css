@@ -1,0 +1,293 @@
+/* Estilos globales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c2831;
+    color: white;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Logotipo */
+.logo {
+    font-size: 1.25rem; /* Tamaño de fuente responsivo */
+    line-height: 1.6;
+}
+
+/* Navegación */
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem; /* Tamaño de fuente responsivo */
+    transition: color 0.3s ease;
+    
+}
+/*Cuando el cursor este sobre el texto, cambia de color de blanco a verde*/
+.nav li a:hover,
+.nav li a:focus {
+    color: #b8fa9e;
+}
+@media (max-width: 768px) {
+    .header,
+    .nav,
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav li a {
+        font-size: 1.5rem; /* Tamaño de fuente más grande para una mejor legibilidad */
+    }
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/*CONTENEDOR PARA EL TITULO DE LA GALERIA*/
+.title-Galley {
+    font-size: 4vw; /* Tamaño de fuente responsivo basado en el ancho de la vista del dispositivo */
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 2vw; /* Margen superior responsivo */
+    color: #d4fcf2;
+}
+
+/* Media query para ajustar el tamaño del texto en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .title-Galley {
+        font-size: 6vw; /* Tamaño de fuente más grande para pantallas más pequeñas */
+    }
+}
+
+/*CONTENEDOR IMAGE-TEXT-CONTAINNER*/
+.image-text-container{
+    font-size: 2vw; /* Tamaño de fuente responsivo basado en el ancho de la vista del dispositivo */
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 1vw; /* Margen superior responsivo */
+    color: #d4fcf2;
+}
+/* Media query para ajustar el tamaño del texto en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .image-text-container {
+        font-size: 6vw; /* Tamaño de fuente más grande para pantallas más pequeñas */
+    }
+}
+.image-container img {
+    max-width: 100%; /* Hace que la imagen sea responsiva y no exceda el ancho del contenedor */
+    height: auto;
+}
+ /*Contenedor de la galeria*/ 
+.gallery-container {
+    padding: 20px; /* Espacio alrededor del contenido de la galería */
+  }
+  /*CONTENEDOR DE IMAGENES DE ARRIBA */
+  .gallery-grid-arriba {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño mínimo y máximo de las columnas según desees */
+    gap: 10px; /* Espacio entre elementos de la galería */
+    margin-bottom: 20px; 
+  }
+  
+  .gallery-item {
+    background: #fff; /* Color de fondo de cada elemento de la galería, si es necesario */
+    overflow: hidden;
+}
+  
+  .gallery-item img {
+    width: 100%; /* Hace que la imagen sea responsive y se ajuste al contenedor */
+    min-height: 100%; /* Asegura que la imagen cubra la altura completa del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  object-position: center; /* Centra la imagen dentro del contenedor */
+  display: block; /* Elimina cualquier espacio adicional debajo de la imagen */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Agrega una transición suave */
+  opacity: 0.7;
+  height: 300px; /* Altura fija para los contenedores de las imágenes */
+
+}
+.gallery-item:hover img {
+    transform: scale(1.1); /* Agrandamiento al pasar el cursor */
+    opacity: 1; 
+ }
+/*CONTENEDOR DE IMAGENES DE ABAJO */
+.gallery-grid-abajo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño mínimo y máximo de las columnas según desees */
+    gap: 10px; /* Espacio entre elementos de la galería */
+    margin-bottom: 20px; 
+  }
+/* CONTENEDOR DE IMAGENES DEL MEDIO */
+/* Estilo para el contenedor del medio */
+.gallery-grid-medio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    margin-bottom: 20px; 
+    gap: 10px;
+}
+/* Estilo para las imágenes dentro del contenedor del medio */
+.gallery-grid-medio .gallery-item {
+    background: #fff; /* Color de fondo de cada elemento de la galería, si es necesario */
+    overflow: hidden;
+    
+}
+.gallery-grid-medio .gallery-item img {
+    width: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block; 
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+    
+}
+.gallery-grid-medio .gallery-item:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.gallery-grid-lannd {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    margin-bottom: 20px; 
+    gap: 10px;
+}
+
+.gallery-grid-lannd .gallery-item img {
+    width: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block; 
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+    
+}
+.gallery-grid-lannd .gallery-item:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #1c2831;
+    color: white;
+    }
+    
+    .contact-info, .contact-form {
+    flex: 1;
+    }
+    
+    .contact-info {
+    max-width: 50%;
+    }
+    
+    .contact-form form {
+    max-width: 50%;
+    }
+    
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #333;
+    color: white;
+    }
+    
+    .contact-form input[type="submit"] {
+    background-color: #b8fa9e;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    }
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+    .contact-section {
+    flex-direction: column;
+    }
+    
+    .contact-info, .contact-form form {
+    max-width: 100%;
+    }
+    
+    .contact-form input[type="submit"] {
+    width: 100%;
+    }
+    }
+    
+    @media (max-width: 480px) {
+    .contact-section {
+    padding: 20px;
+    }
+    }
+    .site-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background-color: #1c2831;
+        color: white;
+        font-size: 0.8rem;
+      }
+      
+      .footer-left {
+        flex: 1;
+      }
+      
+      .footer-right {
+        flex: 1;
+        text-align: right;
+      }
+      
+      .footer-right a {
+        color: #b8fa9e;
+        text-decoration: none;
+        padding-left: 10px;
+      }
+      
+     /* Ajustes responsivos */
+      @media (max-width: 768px) {
+        .site-footer {
+          flex-direction: column;
+          text-align: center;
+        }
+      
+        .footer-right {
+          margin-top: 10px;
+          text-align: center;
+        }
+      
+        .footer-right a {
+          padding-left: 0;
+          padding-right: 10px;
+        }
+      }
+      
